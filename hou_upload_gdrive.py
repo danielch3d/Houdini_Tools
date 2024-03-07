@@ -40,8 +40,8 @@ def Create_Service(client_secret_file, api_name, api_version, *scopes):
         print(e)
         return None
 
-dir_geo = 'D:/Rebelway Courses/Python for Production/Week 3/Assignment/'
-name_geo = 'output.abc'
+dir_geo = hou.pwd().parm("dir_save").evalAsString()
+name_geo = hou.pwd().parm("alem_filen").evalAsString()
 secret_file = hou.pwd().parm("cred_file").evalAsString()
 gdriv_fid = hou.pwd().parm("g_folder_id").evalAsString()
 full_path = dir_geo+name_geo
